@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "content": "<strong>Start</strong><p>New request received</p>",
+      "to": {
+        "review": "Next"
+      }
+    },
+    {
+      "id": "review",
+      "content": "<strong>Review request</strong><p>Use the button to view the internal workflow</p>",
+      "unfolded": false,
+      "children": [
+        {
+          "id": "check",
+          "content": "<strong>Check information</strong><p>Confirm information is complete</p>",
+          "to": {
+            "decision": "Done"
+          }
+        },
+        {
+          "id": "decision",
+          "content": "<strong>Decision</strong>",
+          "children": [
+            {
+              "id": "approved",
+              "content": "<strong>Approve</strong>",
+              "to": {
+                "finish": "Approved"
+              }
+            },
+            {
+              "id": "rejected",
+              "content": "<strong>Request changes</strong>",
+              "to": {
+                "check": "Retry"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "content": "<strong>Done</strong><p>Notify the requester</p>"
+    }
+  ],
+  "direction": "TB"
+}

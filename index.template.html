@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unfold the flow · Expandable flowcharts</title>
+<link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+<script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+<style><!-- BUILD:STYLE --></style>
+</head><body><main>
+<header><div><div class="eyebrow">PYTHON · JSON · PYSCRIPT</div><h1>Unfold the flow</h1><p class="lead">Expanded nodes contain their children; cycles follow first-visit order.</p></div><span class="badge">Interactive demo</span></header>
+<section class="workspace"><div class="panel editor"><div class="panel-head"><div><h2>Data source</h2><p>Edit the JSON and redraw the chart.</p></div><div class="actions"><label class="file-label" for="file-input">Load JSON</label><input id="file-input" type="file" accept="application/json,.json" hidden><button id="render-button" class="primary" type="button">Draw chart</button></div></div><label for="json-input">JSON</label><textarea id="json-input" spellcheck="false" aria-label="Flowchart JSON"></textarea><p class="note">Load only trusted HTML; node content is rendered directly.</p><p id="status" class="status" role="status">Loading Python runtime…</p></div>
+<div class="panel output"><div class="panel-head flow-panel-head"><div><h2>Flowchart</h2><p>Select ◎ to focus; pan and pinch to zoom on mobile.</p></div><div class="zoom-controls" role="group" aria-label="Canvas zoom"><button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="zoom-reset" type="button" aria-label="Reset zoom">100%</button><button id="zoom-in" type="button" aria-label="Zoom in">＋</button></div></div><div id="diagram" class="flow-viewport" tabindex="0" aria-label="Flowchart canvas, scrollable and zoomable"></div></div></section>
+<footer>Nested nodes represent containment; arrows are defined by <code>to</code>. By <a href="mailto:lamling0909@gmail.com">M.N Ling</a>.</footer></main>
+<script type="py" config='{"packages":["pydantic"]}'><!-- BUILD:PYTHON --></script>
+</body></html>

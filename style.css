@@ -1,0 +1,37 @@
+
+:root{font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;color:#273240;background:#f5f7fa;color-scheme:light dark}*{box-sizing:border-box}body{margin:0}main{max-width:1440px;margin:auto;padding:40px}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.16em;color:#557398}h1{font-size:36px;line-height:1.15;margin:8px 0}.lead{color:#647184;margin:0}.badge,.hint{font-size:13px;color:#3d618a;background:#e8f0fa;padding:7px 12px;border-radius:20px;white-space:nowrap}.workspace{display:grid;grid-template-columns:minmax(310px,.85fr) minmax(0,1.4fr);gap:20px}.panel{min-width:0;background:#fff;border:1px solid #dfe5ec;border-radius:12px;overflow:hidden}.panel-head{min-height:98px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 22px;border-bottom:1px solid #e7ebf1}.panel-head h2{font-size:17px;margin:0 0 5px}.panel-head p{font-size:14px;margin:0;color:#68788c}.primary{border:0;background:#285b96;color:#fff;font-size:14px;font-weight:700;padding:12px 17px;border-radius:8px;min-height:44px;white-space:nowrap;cursor:pointer}button:focus-visible,textarea:focus-visible{outline:3px solid #73a8ef;outline-offset:2px}.editor label{display:block;margin:18px 22px 8px;font-size:13px;font-weight:700;color:#536276}textarea{display:block;margin:0 22px;width:calc(100% - 44px);height:380px;resize:vertical;padding:14px;border:1px solid #dce3eb;border-radius:8px;background:#f8fafc;color:#263a50;font:13px/1.55 ui-monospace,monospace}.note,.status{font-size:13px;line-height:1.5;margin:12px 22px;color:#66778a}.status{color:#28644a}.status.error{color:#b13228}.flow-viewport{overflow:auto;min-height:440px;background-color:#f8fafc;background-image:radial-gradient(#dfe6ed 1px,transparent 1px);background-size:20px 20px}.flow-canvas{position:relative;min-width:100%;color:#273240}.flow-roots{position:absolute;top:28px;left:28px;display:flex;flex-direction:column;align-items:flex-start;gap:42px}.flow-node{position:relative;width:max-content;min-width:220px;max-width:none;border:1px solid #cbd7e5;border-radius:9px;background:#fff;box-shadow:0 2px 6px #253c5710}.flow-node.is-open{background:#e8f1fb;border:1px solid #91b2d6}.flow-head{display:flex;align-items:center;gap:12px;padding:12px 14px;min-height:62px}.flow-content{flex:1;min-width:0;max-width:240px;overflow-wrap:anywhere;font-size:14px}.flow-content p{font-size:13px;color:#607086;margin:4px 0 0}.flow-children{display:flex;flex-direction:column;align-items:flex-start;gap:38px;padding:0 16px 16px}.flow-toggle{min-width:44px;min-height:44px;padding:4px;border:1px solid #cddced;border-radius:7px;background:#edf4fc;color:#295b91;font-weight:700;cursor:pointer;flex-shrink:0}.flow-toggle:hover{background:#dbeaff}.flow-lines{position:absolute;inset:0;overflow:visible;pointer-events:none;z-index:4}.flow-edge{fill:none;stroke:#527299;stroke-width:1.5}.flow-label{font:12px system-ui,sans-serif;fill:#3a5678;paint-order:stroke;stroke:#f8fafc;stroke-width:4px;stroke-linejoin:round}footer{color:#6d7b8d;font-size:13px;margin-top:18px}code{font-family:ui-monospace,monospace}@media(max-width:800px){main{padding:24px 16px}.workspace{grid-template-columns:1fr}.flow-viewport{min-height:360px}textarea{height:280px}header{align-items:flex-start}.badge{margin-top:6px}}@media(prefers-color-scheme:dark){:root{color:#e4eaf1;background:#171d25}.panel{background:#212a34;border-color:#3b4754}.panel-head{border-color:#3b4754}.lead,.panel-head p,.note,footer{color:#b2c0ce}.badge,.hint{background:#33465b;color:#d2e5fb}textarea{background:#18212b;border-color:#465666;color:#e0ebf5}.flow-viewport{background-color:#1c2631;background-image:radial-gradient(#455262 1px,transparent 1px)}.flow-node{background:#2b3948;border-color:#5c7187;color:#f4f7fb}.flow-node.is-open{background:#304a60;border-color:#769cbc}.flow-content p{color:#c5d3e1}.flow-toggle{background:#374e66;color:#e5f0ff;border-color:#63809f}.flow-edge{stroke:#95b8df}.flow-label{fill:#d9e9fa;stroke:#1c2631}.status{color:#a6e2c1}.status.error{color:#ffb1aa}}
+
+.flow-horizontal .flow-roots,.flow-horizontal .flow-children{flex-direction:row;align-items:flex-start}.flow-horizontal .flow-roots{gap:42px}.flow-horizontal .flow-children{gap:36px;padding-top:4px}
+
+.actions{display:flex;gap:8px;align-items:center}.editor .file-label{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin:0;padding:9px 12px;border:1px solid #cbd7e5;border-radius:8px;background:#fff;color:#2d527c;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap}@media(max-width:480px){.editor .panel-head{align-items:flex-start;flex-direction:column}}
+
+@media(prefers-color-scheme:dark){.flow-toggle:hover{background:#466581;color:#fff}.editor label:not(.file-label){color:#bdcadd}}
+
+.flow-layer{display:flex;flex-direction:row;align-items:flex-start;gap:32px}.flow-horizontal .flow-layer{flex-direction:column;gap:32px}.flow-horizontal .flow-roots,.flow-horizontal .flow-children{flex-direction:row}.flow-horizontal .flow-children{gap:38px}.flow-horizontal .flow-roots{gap:42px}
+
+.flow-content img{display:block;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-top:8px}
+
+/* The stage controls scroll extents; only the inner canvas is scaled. */
+.flow-viewport{touch-action:none;height:min(70vh,720px)}
+.flow-stage{position:relative}
+.flow-canvas{position:absolute;top:0;left:0;min-width:0;transform-origin:0 0}
+.zoom-controls{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.zoom-controls button{min-width:44px;min-height:44px;padding:8px 10px;border:1px solid #cbd7e5;border-radius:8px;background:#f4f8fd;color:#244d7b;font-size:14px;font-weight:700;cursor:pointer}
+.zoom-controls button:hover{background:#e3eefb}
+#zoom-reset{min-width:58px}
+@media(max-width:600px){.flow-panel-head{align-items:flex-start;flex-wrap:wrap}.flow-panel-head p{max-width:245px}}
+@media(prefers-color-scheme:dark){.zoom-controls button{background:#374e66;border-color:#63809f;color:#e5f0ff}.zoom-controls button:hover{background:#466581}}
+
+.flow-viewport:focus-visible{outline:3px solid #73a8ef;outline-offset:-3px}
+
+/* Center each flow layer across its direction; reverse flows keep the same axis. */
+.flow-roots,.flow-children,.flow-horizontal .flow-roots,.flow-horizontal .flow-children{align-items:center}
+.flow-reverse-tb .flow-roots,.flow-reverse-tb .flow-children{flex-direction:column-reverse}
+.flow-reverse-lr .flow-roots,.flow-reverse-lr .flow-children{flex-direction:row-reverse}
+.flow-focus{min-width:44px;min-height:44px;padding:4px;border:1px solid #cddced;border-radius:7px;background:#f7fafd;color:#295b91;font-size:18px;cursor:pointer;flex-shrink:0}
+.flow-focus:hover{background:#dbeaff}
+@media(prefers-color-scheme:dark){.flow-focus{background:#374e66;color:#e5f0ff;border-color:#63809f}.flow-focus:hover{background:#466581}}
+
+/* Horizontal flows need room for the full label, not just the arrow. */
+.flow-horizontal .flow-roots{gap:var(--flow-direction-gap,42px)}
+.flow-horizontal .flow-children{gap:var(--flow-direction-gap,38px)}

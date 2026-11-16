@@ -1,0 +1,8 @@
+{
+  "direction": "TB",
+  "nodes": [
+    {"id": "A", "content": "<strong>A · Start</strong>", "to": {"B": "Continue"}},
+    {"id": "B", "content": "<strong>B · Process</strong>", "to": {"C": "Done"}},
+    {"id": "C", "content": "<strong>C · Check</strong>", "to": {"A": "Restart"}}
+  ]
+}
